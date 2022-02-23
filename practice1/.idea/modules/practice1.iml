@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="practice1" external.linked.project.path="$ANDROID_SDK_HOME$/practice1" external.root.project.path="$ANDROID_SDK_HOME$/practice1" external.system.id="GRADLE" external.system.module.group="" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="java-gradle" name="Java-Gradle">
+      <configuration>
+        <option name="BUILDABLE" value="false" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager">
+    <exclude-output />
+    <content url="file://$ANDROID_SDK_HOME$/practice1">
+      <excludeFolder url="file://$ANDROID_SDK_HOME$/practice1/.gradle" />
+      <excludeFolder url="file://$ANDROID_SDK_HOME$/practice1/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
