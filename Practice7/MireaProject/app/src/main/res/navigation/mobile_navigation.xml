@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="ru.mirea.bugraev.mireaproject.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="ru.mirea.bugraev.mireaproject.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="ru.mirea.bugraev.mireaproject.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_brouser"
+        android:name="ru.mirea.bugraev.mireaproject.BrouserFragment"
+        android:label="fragment_brouser"
+        tools:layout="@layout/fragment_brouser" />
+    <fragment
+        android:id="@+id/nav_calculator"
+        android:name="ru.mirea.bugraev.mireaproject.Fragment_Calculator"
+        android:label="fragment__calculator"
+        tools:layout="@layout/fragment__calculator" />
+    <fragment
+        android:id="@+id/nav_music"
+        android:name="ru.mirea.bugraev.mireaproject.MusicFragment"
+        android:label="fragment_music"
+        tools:layout="@layout/fragment_music" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="ru.mirea.bugraev.mireaproject.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/nav_records"
+        android:name="ru.mirea.bugraev.mireaproject.RecordsFragment"
+        android:label="fragment_records"
+        tools:layout="@layout/fragment_records" />
+    <fragment
+        android:id="@+id/nav_weather"
+        android:name="ru.mirea.bugraev.mireaproject.WeatherFragment"
+        android:label="fragment_weather"
+        tools:layout="@layout/fragment_weather" />
+</navigation>
