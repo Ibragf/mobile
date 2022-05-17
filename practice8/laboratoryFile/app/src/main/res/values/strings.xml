@@ -1,0 +1,5 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string name="app_name">laboratory.File</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="google_maps_key">AIzaSyAjMWoW6eaVd2DXQyITJWVQ5TFbDdGMvsg</string>
+</resources>

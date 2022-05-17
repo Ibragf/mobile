@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">yandexDriver</string>
+    <string name="unknown_error_message">unknown error</string>
+    <string name="remote_error_message">server error(5XX)</string>
+    <string name="network_error_message">client error(4XX)</string>
+</resources>
