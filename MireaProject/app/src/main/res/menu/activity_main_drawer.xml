@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_slideshow" />
+        <item
+            android:id="@+id/nav_brouser"
+            android:icon="@drawable/ic_browser_baseline_"
+            android:title="browser" />
+        <item
+            android:id="@+id/nav_calculator"
+            android:icon="@drawable/ic_calculate_baseline"
+            android:title="calculator" />
+        <item
+            android:id="@+id/nav_music"
+            android:icon="@drawable/ic_baseline_music_note_24"
+            android:title="Music"
+            />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_baseline"
+            android:title="Settings"
+            />
+        <item
+            android:id="@+id/nav_records"
+            android:icon="@drawable/ic_records_baseline"
+            android:title="Records"
+            />
+        <item
+            android:id="@+id/nav_weather"
+            android:icon="@drawable/ic_weather_baseline"
+            android:title="Weather"
+            />
+        <item
+            android:id="@+id/nav_maps"
+            android:icon="@drawable/ic_map_baseline"
+            android:title="Map"
+            />
+    </group>
+</menu>
