@@ -1,8 +1,10 @@
 package ru.mirea.bugraev.mireaproject;
 
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import androidx.annotation.ColorInt;
 import androidx.fragment.app.Fragment;
 
 import android.text.TextUtils;
@@ -46,6 +48,8 @@ public class WeatherFragment extends Fragment {
         humidity=v.findViewById(R.id.humidityTextView);
 
         cityEditText=v.findViewById(R.id.cityEditText);
+        cityEditText.setHintTextColor(Color.DKGRAY);
+        cityEditText.setTextColor(Color.BLACK);
         Button OkButton=v.findViewById(R.id.WeatherOkButton);
         OkButton.setOnClickListener(new View.OnClickListener() {
             @Override

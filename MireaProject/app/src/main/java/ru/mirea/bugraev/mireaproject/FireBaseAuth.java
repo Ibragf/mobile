@@ -54,7 +54,7 @@ public class FireBaseAuth extends AppCompatActivity {
         }
 
         String password=passwordField.getText().toString();
-        if(TextUtils.isEmpty(email))
+        if(TextUtils.isEmpty(password))
         {
             passwordField.setError("Required.");
             valid=false;
