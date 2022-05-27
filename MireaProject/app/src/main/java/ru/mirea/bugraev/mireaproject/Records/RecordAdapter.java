@@ -16,6 +16,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.LinkedList;
@@ -42,7 +43,7 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.RecordView
     @Override
     public RecordAdapter.RecordViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_record_layout,parent,false);
-        viewModel=new SharedViewModel();
+        viewModel= ViewModelProviders.of(activity).get(SharedViewModel.class);
 
         return new RecordViewHolder(v);
     }
@@ -60,8 +61,8 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.RecordView
                 viewModel.select(recordList.get(position));
                 ItemFragment itemFragment=new ItemFragment();
                 FragmentTransaction ft=activity.getSupportFragmentManager().beginTransaction();
-                ft.replace()
-                ft.show(itemFragment);
+                ft.replace(R.id.record_container, itemFragment);
+                ft.commit();
             }
         });
     }

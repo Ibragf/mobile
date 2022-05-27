@@ -5,19 +5,23 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import ru.mirea.bugraev.mireaproject.App;
 import ru.mirea.bugraev.mireaproject.R;
 import ru.mirea.bugraev.mireaproject.Records.AppDataBase;
 import ru.mirea.bugraev.mireaproject.Records.RecordDao;
 import ru.mirea.bugraev.mireaproject.Records.RecordModel;
+import ru.mirea.bugraev.mireaproject.RecordsFragment;
 
 public class ItemFragment extends Fragment {
     private TextView txwName;
@@ -35,8 +39,9 @@ public class ItemFragment extends Fragment {
         txwName=view.findViewById(R.id.item_name);
         txwContent=view.findViewById(R.id.item_content);
         Button deleteBtn=view.findViewById(R.id.itemDeleteButton);
+        Button backBtn=view.findViewById(R.id.itemBackButton);
 
-        SharedViewModel viewModel=new SharedViewModel();
+        SharedViewModel viewModel= ViewModelProviders.of(getActivity()).get(SharedViewModel.class);
         viewModel.getSelected().observe(getViewLifecycleOwner(), new Observer<RecordModel>() {
             @Override
             public void onChanged(RecordModel Model) {
@@ -53,10 +58,29 @@ public class ItemFragment extends Fragment {
                 {
                     recordDao.delete(recordModel);
                 }
-                getActivity().onBackPressed();
+                else
+                {
+                    Toast.makeText(getContext(),"null",Toast.LENGTH_SHORT).show();
+                }
+                toRecordsFragment();
+            }
+        });
+
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toRecordsFragment();
             }
         });
 
         return view;
+    }
+
+    private void toRecordsFragment()
+    {
+        RecordsFragment recordsFragment=new RecordsFragment();
+        FragmentTransaction ft=getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.record_container, recordsFragment);
+        ft.commit();
     }
 }

@@ -57,4 +57,9 @@
         android:name="ru.mirea.bugraev.mireaproject.map.MapsFragment"
         android:label="fragment_maps"
         tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/nav_recordContainer"
+        android:name="ru.mirea.bugraev.mireaproject.RecordContainer"
+        android:label="fragment_record_container"
+        tools:layout="@layout/fragment_record_container" />
 </navigation>

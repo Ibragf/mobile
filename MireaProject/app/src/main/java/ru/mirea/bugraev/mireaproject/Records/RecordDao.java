@@ -14,6 +14,8 @@ public interface RecordDao {
         List<RecordModel> getAll();
         @Query("SELECT * FROM recordmodel WHERE id = :id")
         RecordModel getById(long id);
+        @Query("DELETE FROM recordmodel WHERE id=:id")
+        void deleteById(long id);
         @Insert
         void insert(RecordModel record);
         @Update

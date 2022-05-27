@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.nav_calculator,
                 R.id.nav_music,
                 R.id.nav_settings,
-                R.id.nav_records,
+                R.id.nav_recordContainer,
                 R.id.nav_weather,
                 R.id.map)
                 .setOpenableLayout(drawer)
